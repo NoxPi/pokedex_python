@@ -64,3 +64,4 @@ target/
 # Custom stuff
 .idea
 *.sqlite3
+pokedex/static/img
