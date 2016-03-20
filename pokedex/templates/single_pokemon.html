@@ -1,0 +1,8 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    {{ pokemon.english_full_name }} - Pokedex
+{% endblock %}
+{% block content %}
+    {% include 'single_pokemon_raw.html' %}
+{% endblock %}

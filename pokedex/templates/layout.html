@@ -1,0 +1,35 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+        <!-- Bootstrap -->
+        <link href='{% static "css/bootstrap.min.css" %}' rel='stylesheet'>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+
+        <!-- Main -->
+        <link href='{% static "css/main.css" %}' rel='stylesheet'>
+    </head>
+    <body>
+        <div class='container-fluid'>
+            <div class='row-fluid pushDown'>
+                <div class='span4'>
+                    {% include 'searchBox.html' %}
+                </div>
+                <div class="span7">
+                    <div id="container">
+                        {% block content %}{% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src='http://code.jquery.com/jquery.js'></script>
+        <script src='{% static "js/bootstrap.min.js" %}'></script>
+        <script src='{% static "js/jquery.pjax.js" %}'></script>
+        <script src='{% static "js/main.js" %}'></script>
+        {% block bottomScripts %}{% endblock %}
+    </body>
+</html>
