@@ -1,0 +1,23 @@
+{% load template_filters %}
+{% load staticfiles %}
+
+<title>{{ pokemon.english_full_name }} - Pokedex</title>
+<div class="frame">
+    <div class="nameBox">
+        <h2>{{ pokemon.id }} - {{ pokemon.english_full_name }}</h2>
+        {% autoescape off %}
+        {{ pokemon.primary_type | type_to_label }}
+        {% if pokemon.secondary_type %}
+            {{ pokemon.secondary_type | type_to_label }}
+        {% endif %}
+        {% endautoescape %}
+    </div>
+    {% with pokemon.id|stringformat:"i" as id %}
+    <br>
+        {% with 'img/sugimori/'|add:id|add:'.png' as img_url %}
+    <img id="sugimoriImg" src="{% static img_url %}" alt="{{ pokemon.english_full_name }}">
+        {% endwith %}
+    {% endwith %}
+    <p>Japanese name: {{ pokemon.japanese_full_name }}</p>
+</div>
+
