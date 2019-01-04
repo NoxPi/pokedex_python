@@ -1,5 +1,5 @@
-Django==1.9.4
+Django=>1.9.13
 djangorestframework==3.3.3
-Pillow==3.1.1
+Pillow==3.3.2
 virtualenv==15.0.1
 virtualenvwrapper-win==1.2.1
