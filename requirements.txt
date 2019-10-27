@@ -1,5 +1,5 @@
 Django=>1.9.13
 djangorestframework==3.9.1
-Pillow==3.3.2
+pillow>=6.2.0
 virtualenv==15.0.1
 virtualenvwrapper-win==1.2.1
