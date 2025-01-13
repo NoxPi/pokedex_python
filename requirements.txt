@@ -1,5 +1,5 @@
-Django=>1.9.13
-djangorestframework==3.9.1
-pillow>=6.2.0
-virtualenv==15.0.1
-virtualenvwrapper-win==1.2.1
+Django
+djangorestframework
+pillow
+virtualenv
+virtualenvwrapper-win
